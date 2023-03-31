@@ -4,7 +4,7 @@ const parts = require("./webpack.parts");
 
 const commonConfig = merge([
   {
-    entry: "./src/index.js",
+    entry: "./src/index.jsx",
   },
   {
     output: {
@@ -13,6 +13,7 @@ const commonConfig = merge([
     },
   },
   parts.page(),
+  parts.loadJavaScript(),
   parts.loadCSS(),
 ]);
 
