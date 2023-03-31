@@ -30,3 +30,13 @@ exports.devServer = () => ({
   },
 });
 
+exports.loadCSS = () => ({
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+});

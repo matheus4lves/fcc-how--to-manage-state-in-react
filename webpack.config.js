@@ -13,6 +13,7 @@ const commonConfig = merge([
     },
   },
   parts.page(),
+  parts.loadCSS(),
 ]);
 
 const configs = {
