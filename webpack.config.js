@@ -16,7 +16,7 @@ const commonConfig = merge([
 ]);
 
 const configs = {
-  development: merge([]),
+  development: merge([parts.devServer()]),
   production: {},
 };
 

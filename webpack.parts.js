@@ -21,4 +21,12 @@ exports.loadJavaScript = () => ({
 });
 
 // Development server
-exports.devServer = () => ({});
+exports.devServer = () => ({
+  devServer: {
+    host: "local-ip",
+    hot: true,
+    open: true,
+    port: 3000,
+  },
+});
+
