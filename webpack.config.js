@@ -4,7 +4,12 @@ const parts = require("./webpack.parts");
 
 const commonConfig = merge([
   {
-    entry: "./src/index.jsx",
+    /* We should define the context that webpack will use to look for entry points
+    and loaders. By default, the current working directory of Node.js is used, but
+    it's recommended to pass a value in your configuration. */
+    context: path.resolve(__dirname, "src"),
+    // Requests that should resolve in the current directory need to start with './'
+    entry: "./index.jsx",
   },
   {
     output: {
